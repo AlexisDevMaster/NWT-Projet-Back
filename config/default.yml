@@ -1,18 +1,18 @@
 server:
-  host: 0.0.0.0
+  host: localhost
   port: 3000
   cors:
     - "http://0.0.0.0:4200"
     - "http://127.0.0.1:4200"
     - "http://localhost:4200"
 swagger:
-  title: New Web's Technologies course with NestJS
-  description: The People API description
+  title: New Web's Technologies project with NestJS
+  description: The Video API description
   version: 1.0
   tag: people
   path: documentation
 mongodb:
-  uri: mongodb://0.0.0.0:27017/nwt
+  uri: mongodb://0.0.0.0:27017/NWT
   options:
     useNewUrlParser: true
     useUnifiedTopology: true
