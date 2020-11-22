@@ -6,12 +6,14 @@ import { CategoryModule } from './category/category.module';
 
 
 import * as Config from 'config';
+import { VideoModule } from './video/video.module';
 
 @Module({
   imports: [
     HelloModule,
     PeopleModule,
     CategoryModule,
+    VideoModule,
     MongooseModule.forRoot(Config.get<string>('mongodb.uri'), Config.get<MongooseModuleOptions>('mongodb.options')),
   ],
 })
