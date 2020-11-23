@@ -44,6 +44,19 @@ export class VideoDao {
   }
 
   /**
+   * Returns one video of the list matching url in parameter
+   *
+   * @param {string} url of the video in the db
+   *
+   * @return {Observable<Video | void>}
+   */
+  findByUrl(url: string): Observable<Video | void> {
+    return from(this._videoModel.findOne({url})).pipe(
+      map((doc: MongooseDocument) => !!doc ? doc.toJSON() : undefined),
+    );
+  }
+
+  /**
    * Check if video already exists with index and add it in video list
    *
    * @param {CreateVideoDto} video to create

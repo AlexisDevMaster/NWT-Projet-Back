@@ -50,6 +50,11 @@ export class UpdateVideoDto {
   @IsNotEmpty()
   path: string;
 
+  @ApiProperty({ name: 'type', description: 'Path of the video', example: 'video/mp4' })
+  @IsString()
+  @IsNotEmpty()
+  type: string;
+
   @ApiProperty({ name: 'thumbnail_path', description: 'Thumbnail_path of the video', example: '...' })
   @IsString()
   @IsNotEmpty()

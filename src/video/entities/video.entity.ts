@@ -46,6 +46,12 @@ export class VideoEntity {
   @Type(() => String)
   path: string;
 
+  @ApiProperty({ name: 'type', description: 'Type of the video', example: 'video/mp4' })
+  @Expose()
+  @Type(() => String)
+  type: string;
+
+
   @ApiProperty({ name: 'thumbnail_path', description: 'Thumbnail_path of the video', example: '...' })
   @Expose()
   @Type(() => String)
@@ -60,6 +66,7 @@ export class VideoEntity {
   @Expose()
   @Type(() => String)
   url: string;
+
 
   @ApiProperty({ name: 'categories', description: 'Categories' })
   @Expose()

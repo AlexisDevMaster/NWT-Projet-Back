@@ -61,6 +61,25 @@ export class VideoService {
   }
 
   /**
+   * Returns one video of the list matching id in parameter
+   *
+   * @param {string} url of the video
+   *
+   * @returns {Observable<VideoEntity>}
+   */
+  findOneByUrl(url: string): Observable<VideoEntity> {
+    return this._videoDao.findByUrl(url)
+      .pipe(
+        catchError(e => throwError(new UnprocessableEntityException(e.message))),
+        mergeMap(_ =>
+          !!_ ?
+            of(new VideoEntity(_)) :
+            throwError(new NotFoundException(`Video with url '${url}' not found`)),
+        ),
+      );
+  }
+
+  /**
    * Check if video already exists and add it in video list
    *
    * @param video to create

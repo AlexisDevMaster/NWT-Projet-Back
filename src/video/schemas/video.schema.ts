@@ -62,6 +62,12 @@ export class Video extends Document {
     type: String,
     required: true,
   })
+  type: string;
+
+  @Prop({
+    type: String,
+    required: true,
+  })
   thumbnail_path: string;
 
   @Prop({

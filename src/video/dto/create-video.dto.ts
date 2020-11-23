@@ -48,6 +48,12 @@ export class CreateVideoDto {
   @IsNotEmpty()
   path: string;
 
+  @ApiProperty({ name: 'type', description: 'Type of the video', example: 'video/mp4' })
+  @IsString()
+  @IsNotEmpty()
+  type: string;
+
+
   @ApiProperty({ name: 'thumbnail_path', description: 'Thumbnail_path of the video', example: '...' })
   @IsString()
   @IsNotEmpty()

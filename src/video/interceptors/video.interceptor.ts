@@ -22,7 +22,7 @@ export class VideoInterceptor implements NestInterceptor {
     const cls = context.getClass();
     const handler = context.getHandler();
     const response: FastifyReply = context.switchToHttp().getResponse<FastifyReply>();
-    const logCtx = `CategoryInterceptor => ${cls.name}.${handler.name}`;
+    const logCtx = `VideoInterceptor => ${cls.name}.${handler.name}`;
 
     return next.handle()
       .pipe(

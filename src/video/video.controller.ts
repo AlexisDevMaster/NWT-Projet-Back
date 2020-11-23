@@ -28,6 +28,7 @@ import { HandlerParams } from './validators/handler-params';
 import { Observable } from 'rxjs';
 import { CreateVideoDto } from './dto/create-video.dto';
 import { UpdateVideoDto } from './dto/update-video.dto';
+import { HandlerParamsUrl } from './validators/handler-params-url';
 
 @ApiTags('video')
 @Controller('video')
@@ -63,6 +64,28 @@ export class VideoController {
   @Get('random')
   findRandom(): Observable<VideoEntity | void> {
     return this._videoService.findRandom();
+  }
+
+  /**
+   * Handler to answer to GET /video/:id route
+   *
+   * @param {HandlerParams} params list of route params to take video id
+   *
+   * @returns Observable<VideoEntity>
+   */
+  @ApiOkResponse({ description: 'Returns the video for the given "url"', type: VideoEntity })
+  @ApiNotFoundResponse({ description: 'Video with the given "id" doesn\'t exist in the database' })
+  @ApiBadRequestResponse({ description: 'Parameter provided is not good' })
+  @ApiUnprocessableEntityResponse({ description: 'The request can\'t be performed in the database' })
+  @ApiParam({
+    name: 'url',
+    description: 'Unique url identifier of the video in the database',
+    type: String,
+    allowEmptyValue: false,
+  })
+  @Get('/url/:url')
+  findOneByUrl(@Param() params: HandlerParamsUrl): Observable<VideoEntity> {
+    return this._videoService.findOneByUrl(params.url);
   }
 
   /**
@@ -150,4 +173,7 @@ export class VideoController {
   delete(@Param() params: HandlerParams): Observable<void> {
     return this._videoService.delete(params.id);
   }
+
+
+
 }

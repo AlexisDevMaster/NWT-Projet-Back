@@ -9,6 +9,7 @@ import { PeopleModule } from './people/people.module';
 import { SwaggerConfig } from './interfaces/swagger-config.interface';
 import { CategoryModule } from './category/category.module';
 import { VideoModule } from './video/video.module';
+import { join } from 'path';
 
 async function bootstrap(config: AppConfig, swaggerConfig: SwaggerConfig) {
   // create NestJS application
@@ -19,6 +20,13 @@ async function bootstrap(config: AppConfig, swaggerConfig: SwaggerConfig) {
 
   // enable CORS for our front-end app
   app.enableCors({ origin: config.cors });
+
+  app.useStaticAssets({
+    root: join(__dirname, '..', 'public'),
+    prefix: '/public/',
+  });
+  Logger.log(__dirname, 'bootstrap');
+  Logger.log(join(__dirname, '..', 'public'), 'bootstrap');
 
   // use global pipe validation
   app.useGlobalPipes(
