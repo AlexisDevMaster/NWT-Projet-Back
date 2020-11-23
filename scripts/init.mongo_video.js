@@ -13,10 +13,10 @@ db.getCollection('videos').insertMany([
         "nb_dislike": 0,
         "author": "Admin",
         "description": "",
-        "path":  "",
-        "thumbnail_path": "",
+        "path":  "video0-62/video0-62.mp4",
+        "thumbnail_path": "video0-62/video0-62.png",
         "nb_view": 0,
-        "url": "",
+        "url": "video0-62",
         "categories":[{"id": "", "title": ""}]
     },
     {
@@ -27,10 +27,10 @@ db.getCollection('videos').insertMany([
         "nb_dislike": 0,
         "author": "Admin",
         "description": "",
-        "path":  "",
-        "thumbnail_path": "",
+        "path":  "video2/video2.mp4",
+        "thumbnail_path": "video2/video2.png",
         "nb_view": 0,
-        "url": "",
+        "url": "video2",
         "categories":[{"id": "", "title": "Music"}]
     },
     {
@@ -41,10 +41,10 @@ db.getCollection('videos').insertMany([
         "nb_dislike": 0,
         "author": "Admin",
         "description": "",
-        "path":  "",
-        "thumbnail_path": "",
+        "path":  "video3/video3.mp4",
+        "thumbnail_path":  "video3/video3.png",
         "nb_view": 0,
-        "url": "",
+        "url": "video3",
         "categories":[{"id": "", "title": "Vlog"}]
     },
     {
@@ -55,10 +55,10 @@ db.getCollection('videos').insertMany([
         "nb_dislike": 0,
         "author": "Admin",
         "description": "",
-        "path":  "",
-        "thumbnail_path": "",
+        "path":  "video4/video4.mp4",
+        "thumbnail_path": "video4/video4.png",
         "nb_view": 0,
-        "url": "",
+        "url": "video4",
         "categories":[{"id": "", "title": "Gaming"}]
     },    {
         "title": "Video5",
@@ -68,10 +68,10 @@ db.getCollection('videos').insertMany([
         "nb_dislike": 0,
         "author": "Admin",
         "description": "",
-        "path":  "",
-        "thumbnail_path": "",
+        "path":  "video5/video5.mp4",
+        "thumbnail_path": "video5/video5.png",
         "nb_view": 0,
-        "url": "",
+        "url": "video5",
         "categories":[{"id": "", "title": "Gaming"}]
     },    {
         "title": "Video6",
@@ -81,10 +81,10 @@ db.getCollection('videos').insertMany([
         "nb_dislike": 0,
         "author": "Admin",
         "description": "",
-        "path":  "",
-        "thumbnail_path": "",
+        "path":  "video6/video6.mp4",
+        "thumbnail_path": "video6/video6.png",
         "nb_view": 0,
-        "url": "",
+        "url": "video6",
         "categories":[{"id": "", "title": ""}]
     },    {
         "title": "Video7",
@@ -94,10 +94,10 @@ db.getCollection('videos').insertMany([
         "nb_dislike": 0,
         "author": "Admin",
         "description": "",
-        "path":  "",
-        "thumbnail_path": "",
+        "path":  "video7/video7.mp4",
+        "thumbnail_path": "video7/video7.png",
         "nb_view": 0,
-        "url": "",
+        "url": "video7",
         "categories":[{"id": "", "title": ""}]
     },    {
         "title": "Video8",
@@ -107,10 +107,10 @@ db.getCollection('videos').insertMany([
         "nb_dislike": 0,
         "author": "Admin",
         "description": "",
-        "path":  "",
-        "thumbnail_path": "",
+        "path":  "video8/video8.mp4",
+        "thumbnail_path": "video8/video8.png",
         "nb_view": 0,
-        "url": "",
+        "url": "video8",
         "categories":[{"id": "", "title": "Gaming"}]
     },
 
