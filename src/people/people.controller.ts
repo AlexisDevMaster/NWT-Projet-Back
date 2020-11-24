@@ -44,7 +44,7 @@ export class PeopleController {
   /**
    * Handler to answer to GET /people route
    *
-   * @returns Observable<PersonEntity[] | void>
+   * @returns Observable<UserEntity[] | void>
    */
   @ApiOkResponse({ description: 'Returns an array of person', type: PersonEntity, isArray: true })
   @ApiNoContentResponse({ description: 'No person exists in database' })
@@ -56,7 +56,7 @@ export class PeopleController {
   /**
    * Handler to answer to GET /people/random route
    *
-   * @returns Observable<PersonEntity | void>
+   * @returns Observable<UserEntity | void>
    */
   @ApiOkResponse({ description: 'Returns one person randomly', type: PersonEntity })
   @ApiNoContentResponse({ description: 'No person exists in database' })
