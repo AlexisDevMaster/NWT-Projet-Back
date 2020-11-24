@@ -15,20 +15,20 @@ export class UserEntity {
   @Type(() => String)
   username: string;
 
-  @ApiProperty({ name: 'isVerified', description: 'Is User is Verified', example: 0 })
+  @ApiProperty({ name: 'verified', description: 'Is User is Verified', example: 0 })
   @Expose()
-  @Type(() => Number)
-  isVerified: number;
+  @Type(() => Boolean)
+  verified: boolean;
 
-  @ApiProperty({ name: 'subscriptions', description: 'User subscriptions' })
+  @ApiProperty({ name: 'subscriptions', description: 'User subscriptions', 'type': [UserSubscriptionsEntity],  example: [{ username:"username",  }]  })
   @Expose()
   @Type(() => UserSubscriptionsEntity)
   subscriptions: UserSubscriptionsEntity[];
 
-  @ApiProperty({ name: 'likes', description: 'Video like, disliked, or not' })
+  @ApiProperty({ name: 'likes', description: 'Video like, disliked, or not', 'type': [UserLikesEntity], example: [{ url:"/url/to/video", isLiked:0 }]})
   @Expose()
   @Type(() => UserLikesEntity)
-  categories: UserLikesEntity[];
+  likes: UserLikesEntity[];
 
 
 

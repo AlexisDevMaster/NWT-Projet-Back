@@ -82,15 +82,12 @@ export class Video extends Document {
   })
   url: string;
 
-  @Prop(raw({
-    id: {
+  @Prop(raw([{
+    url: {
       type: String,
-      trim: true,
-    },
-    name: {
-      type: String,
+      require: true
     }
-  }))
+  }]))
   categories: any;
 
 

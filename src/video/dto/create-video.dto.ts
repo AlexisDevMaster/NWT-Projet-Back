@@ -1,11 +1,11 @@
 import {
-  IsDate, IsDateString, IsInstance,
+   IsDateString, IsInstance,
   IsNotEmpty, IsNumber, IsOptional,
   IsString, ValidateNested,
 } from 'class-validator';
 import { ApiProperty } from '@nestjs/swagger';
 import { Type } from 'class-transformer';
-import { CategoryDto } from '../../category/dto/category.dto';
+import { CategoryDto } from './category.dto';
 
 export class CreateVideoDto {
   @ApiProperty({ name: 'title', description: 'Name of the video', example: 'Gaming' })
@@ -69,7 +69,7 @@ export class CreateVideoDto {
   @IsNotEmpty()
   url: string;
 
-  @ApiProperty({ name: 'categories', description: 'Categories' })
+  @ApiProperty({ name: 'categories', description: 'Categories', type: [CategoryDto] })
   @IsInstance(CategoryDto, {
     each: true
   })

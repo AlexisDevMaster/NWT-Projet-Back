@@ -10,6 +10,7 @@ import { SwaggerConfig } from './interfaces/swagger-config.interface';
 import { CategoryModule } from './category/category.module';
 import { VideoModule } from './video/video.module';
 import { join } from 'path';
+import { UsersModule } from './users/users.module';
 
 async function bootstrap(config: AppConfig, swaggerConfig: SwaggerConfig) {
   // create NestJS application
@@ -46,7 +47,7 @@ async function bootstrap(config: AppConfig, swaggerConfig: SwaggerConfig) {
 
   // create swagger document
   const peopleDocument = SwaggerModule.createDocument(app, options, {
-    include: [ PeopleModule , CategoryModule, VideoModule],
+    include: [ PeopleModule , CategoryModule, VideoModule, UsersModule],
   });
 
   // setup swagger module

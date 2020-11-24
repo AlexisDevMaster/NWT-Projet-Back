@@ -32,6 +32,25 @@ export class UsersService {
   }
 
   /**
+   * Returns one user of the list matching username in parameter
+   *
+   *
+   * @returns {Observable<UserEntity>}
+   * @param username
+   */
+  findOneByUsername(username: string): Observable<UserEntity> {
+    return this._usersDao.findByUsername(username)
+      .pipe(
+        catchError(e => throwError(new UnprocessableEntityException(e.message))),
+        mergeMap(_ =>
+          !!_ ?
+            of(new UserEntity(_)) :
+            throwError(new NotFoundException(`Users with username '${username}' not found`)),
+        ),
+      );
+  }
+
+  /**
    * Returns all existing users in the list
    *
    * @returns {Observable<UserEntity[] | void>}

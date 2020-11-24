@@ -6,7 +6,7 @@ import {
 } from 'class-validator';
 import { ApiProperty } from '@nestjs/swagger';
 import { Type } from 'class-transformer';
-import { CategoryDto } from '../../category/dto/category.dto';
+import { CategoryDto } from './category.dto';
 
 export class UpdateVideoDto {
   @ApiProperty({ name: 'title', description: 'Title of the video', example: 'Gaming' })
@@ -69,7 +69,7 @@ export class UpdateVideoDto {
   @IsOptional()
   url?: string;
 
-  @ApiProperty({ name: 'categories', description: 'Categories' })
+  @ApiProperty({ name: 'categories', description: 'Categories' , type: [CategoryDto]})
   @IsInstance(CategoryDto, {
     each: true
   })

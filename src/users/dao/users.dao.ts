@@ -44,6 +44,20 @@ export class UsersDao {
   }
 
   /**
+   * Returns one user of the list matching username in parameter
+   *
+   * @param {string} username of the user in the db
+   *
+   * @return {Observable<User | void>}
+   */
+  findByUsername(username: string): Observable<User | void> {
+    return from(this._userModel.findOne({username:username}))
+      .pipe(
+        map((doc: MongooseDocument) => !!doc ? doc.toJSON() : undefined),
+      );
+  }
+
+  /**
    * Check if user already exists with index and add it in users list
    *
    * @param {CreateUserDto} user to create

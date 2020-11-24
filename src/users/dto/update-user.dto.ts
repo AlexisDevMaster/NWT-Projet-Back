@@ -32,7 +32,7 @@ export class UpdateUserDto {
   @IsOptional()
   likes?: UserLikesDto[];
 
-  @ApiProperty({ name: 'subscriptions', description: 'User subscriptions' })
+  @ApiProperty({ name: 'subscriptions', description: 'User subscriptions', 'type':[UserSubscriptionDto] })
   @IsInstance(UserSubscriptionDto, {
     each: true
   })

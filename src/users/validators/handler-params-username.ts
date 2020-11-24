@@ -1,8 +1,7 @@
 import { IsMongoId, IsNotEmpty } from 'class-validator';
 
-export class HandlerParams {
-  @IsMongoId()
+export class HandlerParamsUsername {
   @IsNotEmpty()
-  id: string;
+  username: string;
 
 }

@@ -28,6 +28,8 @@ import {
   ApiTags,
   ApiUnprocessableEntityResponse,
 } from '@nestjs/swagger';
+import { HandlerParamsUrl } from '../video/validators/handler-params-url';
+import { HandlerParamsUsername } from './validators/handler-params-username';
 
 @ApiTags('users')
 @Controller('users')
@@ -86,6 +88,29 @@ export class UsersController {
   findOne(@Param() params: HandlerParams): Observable<UserEntity> {
     return this._usersService.findOne(params.id);
   }
+
+  /**
+   * Handler to answer to GET /users/:id route
+   *
+   * @param {HandlerParams} params list of route params to take user id
+   *
+   * @returns Observable<UserEntity>
+   */
+  @ApiOkResponse({ description: 'Returns the user for the given "username"', type: UserEntity })
+  @ApiNotFoundResponse({ description: 'User with the given "username" doesn\'t exist in the database' })
+  @ApiBadRequestResponse({ description: 'Parameter provided is not good' })
+  @ApiUnprocessableEntityResponse({ description: 'The request can\'t be performed in the database' })
+  @ApiParam({
+    name: 'username',
+    description: 'Unique identifier of the user in the database',
+    type: String,
+    allowEmptyValue: false,
+  })
+  @Get('username/:username')
+  findOneByUsername(@Param() params: HandlerParamsUsername): Observable<UserEntity> {
+    return this._usersService.findOneByUsername(params.username);
+  }
+
 
   /**
    * Handler to answer to POST /users route

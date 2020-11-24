@@ -6,6 +6,11 @@ import { CategoryEntity } from '../../category/entities/category.entity';
 @Exclude()
 export class VideoEntity {
 
+  @ApiProperty({ name: 'id', description: 'Unique identifier in the database', example: '5763cd4dc378a38ecd387737' })
+  @Expose()
+  @Type(() => String)
+  id: string;
+
   @ApiProperty({ name: 'title', description: 'Name of the category', example: 'Gaming' })
   @Expose()
   @Type(() => String)
@@ -68,7 +73,7 @@ export class VideoEntity {
   url: string;
 
 
-  @ApiProperty({ name: 'categories', description: 'Categories' })
+  @ApiProperty({ name: 'categories', description: 'Categories', example:[{"title" : "Memes", "thumbnail":"/path/to/thumbnail", "url": "memes"}], type:[CategoryEntity]})
   @Expose()
   @Type(() => CategoryEntity)
   categories: CategoryEntity[];

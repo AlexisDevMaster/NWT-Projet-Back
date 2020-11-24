@@ -16,13 +16,13 @@ export class User extends Document {
   username: string;
 
   @Prop({
-    type: Number,
+    type: Boolean,
     required: true,
     trim: true,
   })
-  isVerified: number;
+  verified: boolean;
 
-  @Prop(raw({
+  @Prop(raw([{
     url: {
       type: String,
       required: true,
@@ -33,16 +33,16 @@ export class User extends Document {
       required: true,
       trim: true,
     }
-  }))
+  }]))
   likes: any;
 
-  @Prop(raw({
-    name: {
+  @Prop(raw([{
+    username: {
       type: String,
       required: true,
       trim: true,
     }
-  }))
+  }]))
   subscriptions: any;
 
 }

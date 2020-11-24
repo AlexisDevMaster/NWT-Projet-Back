@@ -12,6 +12,7 @@ db.getCollection('videos').insertMany([
         "nb_like": 0,
         "nb_dislike": 0,
         "author": "Admin",
+        "type": "video/mp4",
         "description": "",
         "path":  "video0-62/video0-62.mp4",
         "thumbnail_path": "video0-62/video0-62.png",
@@ -27,6 +28,7 @@ db.getCollection('videos').insertMany([
         "nb_dislike": 0,
         "author": "Admin",
         "description": "",
+        "type": "video/mp4",
         "path":  "video2/video2.mp4",
         "thumbnail_path": "video2/video2.png",
         "nb_view": 0,
@@ -40,6 +42,7 @@ db.getCollection('videos').insertMany([
         "nb_like": 0,
         "nb_dislike": 0,
         "author": "Admin",
+        "type": "video/mp4",
         "description": "",
         "path":  "video3/video3.mp4",
         "thumbnail_path":  "video3/video3.png",
@@ -55,6 +58,7 @@ db.getCollection('videos').insertMany([
         "nb_dislike": 0,
         "author": "Admin",
         "description": "",
+        "type": "video/mp4",
         "path":  "video4/video4.mp4",
         "thumbnail_path": "video4/video4.png",
         "nb_view": 0,
@@ -68,6 +72,7 @@ db.getCollection('videos').insertMany([
         "nb_dislike": 0,
         "author": "Admin",
         "description": "",
+        "type": "video/mp4",
         "path":  "video5/video5.mp4",
         "thumbnail_path": "video5/video5.png",
         "nb_view": 0,
@@ -80,6 +85,7 @@ db.getCollection('videos').insertMany([
         "nb_like": 0,
         "nb_dislike": 0,
         "author": "Admin",
+        "type": "video/mp4",
         "description": "",
         "path":  "video6/video6.mp4",
         "thumbnail_path": "video6/video6.png",
@@ -93,12 +99,13 @@ db.getCollection('videos').insertMany([
         "nb_like": 0,
         "nb_dislike": 0,
         "author": "Admin",
+        "type": "video/mp4",
         "description": "",
         "path":  "video7/video7.mp4",
         "thumbnail_path": "video7/video7.png",
         "nb_view": 0,
         "url": "video7",
-        "categories":[{"id": "", "title": ""}]
+        "categories":[{ "url":"memes"}]
     },    {
         "title": "Video8",
         "time": ISODate("2020-01-01T00:15:00.000Z"),
@@ -106,12 +113,13 @@ db.getCollection('videos').insertMany([
         "nb_like": 0,
         "nb_dislike": 0,
         "author": "Admin",
+        "type": "video/mp4",
         "description": "",
         "path":  "video8/video8.mp4",
         "thumbnail_path": "video8/video8.png",
         "nb_view": 0,
         "url": "video8",
-        "categories":[{"id": "", "title": "Gaming"}]
+        "categories":[{"title": "Gaming"}]
     },
 
 
