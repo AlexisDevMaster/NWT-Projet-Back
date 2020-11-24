@@ -25,3 +25,7 @@ $ yarn run start:dev
 $ yarn run build
 $ yarn run start:prod
 ```
+Or
+
+`Add Configuration` or `Edit configuration` on the top right, press the `+` on the top left then add a new npm. Keep the `run` thing and select `start:dev`  in the script field.
+
