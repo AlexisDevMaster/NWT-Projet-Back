@@ -74,7 +74,7 @@ export class CategoryService {
         catchError(e =>
           e.code === 11000 ?
             throwError(
-              new ConflictException(`Category with name '${category.name}' already exists`),
+              new ConflictException(`Category with name '${category.title}' already exists`),
             ) :
             throwError(new UnprocessableEntityException(e.message)),
         ),
@@ -96,7 +96,7 @@ export class CategoryService {
         catchError(e =>
           e.code === 11000 ?
             throwError(
-              new ConflictException(`Category with name '${category.name}' and firstname '${category.name}' already exists`),
+              new ConflictException(`Category with name '${category.title}' already exists`),
             ) :
             throwError(new UnprocessableEntityException(e.message)),
         ),

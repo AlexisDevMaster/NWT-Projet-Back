@@ -9,7 +9,7 @@ export class CategoryEntity {
   @Type(() => String)
   id: string;
 
-  @ApiProperty({ name: 'name', description: 'Name of the category', example: 'Gaming' })
+  @ApiProperty({ name: 'title', description: 'Title of the category', example: 'Gaming' })
   @Expose()
   @Type(() => String)
   title: string;

@@ -1,79 +1,83 @@
 import {
-  IsDate, IsInstance, IsInt,
+  IsDate, IsDateString, IsInstance, IsInt,
   IsNotEmpty, IsNumber,
   IsOptional,
   IsString, ValidateNested,
 } from 'class-validator';
 import { ApiProperty } from '@nestjs/swagger';
-import { PersonAddressDto } from '../../people/dto/person-address.dto';
 import { Type } from 'class-transformer';
+import { CategoryDto } from '../../category/dto/category.dto';
 
 export class UpdateVideoDto {
-  @ApiProperty({ name: 'title', description: 'Name of the category', example: 'Gaming' })
+  @ApiProperty({ name: 'title', description: 'Title of the video', example: 'Gaming' })
   @IsString()
-  @IsNotEmpty()
-  title: string;
+  @IsOptional()
+  title?: string;
 
-  @ApiProperty({ name: 'time', description: 'Thumbnail URL', example: 'https://randomuser.me/portraits/men/55.jpg' })
-  @IsDate()
-  @IsNotEmpty()
-  time: Date;
+  @ApiProperty({ name: 'time', description: 'Time of the video', example: '2020-01-02T00:26:08.000Z' })
+  @IsDateString()
+  @IsOptional()
+  time?: Date;
 
-  @ApiProperty({ name: 'upload_date', description: 'Upload date of the video', example: '2020-01-01' })
-  @IsDate()
-  @IsNotEmpty()
-  upload_date: Date;
+  @ApiProperty({ name: 'upload_date', description: 'Upload date of the video', example: '2020-01-02T00:26:08.000Z' })
+  @IsDateString()
+  @IsOptional()
+  upload_date?: Date;
 
-  @ApiProperty({ name: 'nb_like', description: 'Number of like', example: '800' })
+  @ApiProperty({ name: 'nb_like', description: 'Number of like', example: 800 })
   @IsNumber()
-  @IsNotEmpty()
-  nb_like: number;
+  @IsOptional()
+  nb_like?: number;
 
-  @ApiProperty({ name: 'nb_dislike', description: 'Number of dislike', example: '800' })
+  @ApiProperty({ name: 'nb_dislike', description: 'Number of dislike', example: 800 })
   @IsNumber()
-  @IsNotEmpty()
-  nb_dislike: number;
+  @IsOptional()
+  nb_dislike?: number;
 
   @ApiProperty({ name: 'author', description: 'Name of the author', example: 'Admin' })
   @IsString()
-  @IsNotEmpty()
-  author: string;
+  @IsOptional()
+  author?: string;
 
   @ApiProperty({ name: 'description', description: 'Description of the author', example: '...' })
   @IsOptional()
   @IsString()
-  @IsNotEmpty()
   description?: string;
 
   @ApiProperty({ name: 'path', description: 'Path of the video', example: '...' })
   @IsString()
-  @IsNotEmpty()
-  path: string;
+  @IsOptional()
+  path?: string;
 
   @ApiProperty({ name: 'type', description: 'Path of the video', example: 'video/mp4' })
   @IsString()
-  @IsNotEmpty()
-  type: string;
+  @IsOptional()
+  type?: string;
 
   @ApiProperty({ name: 'thumbnail_path', description: 'Thumbnail_path of the video', example: '...' })
   @IsString()
-  @IsNotEmpty()
-  thumbnail_path: string;
+  @IsOptional()
+  thumbnail_path?: string;
 
-  @ApiProperty({ name: 'nb_view', description: 'Number of view', example: '1562' })
+  @ApiProperty({ name: 'nb_view', description: 'Number of view', example: 1562 })
   @IsNumber()
-  @IsNotEmpty()
-  nb_view: number;
+  @IsOptional()
+  nb_view?: number;
 
   @ApiProperty({ name: 'url', description: 'Url of the video', example: '...' })
   @IsString()
-  @IsNotEmpty()
-  url: string;
+  @IsOptional()
+  url?: string;
 
   @ApiProperty({ name: 'categories', description: 'Categories' })
-  @IsInstance(PersonAddressDto)
-  @ValidateNested()
-  @Type(() => PersonAddressDto)
-  categories: PersonAddressDto[];
+  @IsInstance(CategoryDto, {
+    each: true
+  })
+  @ValidateNested({
+    each: true
+  })
+  @Type(() => CategoryDto)
+  @IsOptional()
+  categories?: CategoryDto[];
 
 }

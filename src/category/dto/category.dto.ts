@@ -1,11 +1,8 @@
-import {
-  IsNotEmpty,
-  IsString,
-} from 'class-validator';
+import { IsNotEmpty, IsString } from 'class-validator';
 import { ApiProperty } from '@nestjs/swagger';
 
-export class CreateCategoryDto {
-  @ApiProperty({ name: 'title', description: 'Name of the category', example: 'Gaming' })
+export class CategoryDto {
+  @ApiProperty({ name: 'title', description: 'Title of the Category', example: 'Memes' })
   @IsString()
   @IsNotEmpty()
   title: string;
@@ -15,9 +12,8 @@ export class CreateCategoryDto {
   @IsNotEmpty()
   thumbnail: string;
 
-  @ApiProperty({ name: 'url', description: 'URL of the category', example: 'gaming' })
+  @ApiProperty({ name: 'url', description: 'URL of the category', example: 'memes' })
   @IsString()
   @IsNotEmpty()
   url: string;
-
 }

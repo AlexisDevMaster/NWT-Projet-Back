@@ -93,7 +93,7 @@ export class VideoService {
         catchError(e =>
           e.code === 11000 ?
             throwError(
-              new ConflictException(`Video with title '${video.title}' and url '${video.url}' already exists`),
+              new ConflictException(`Video with title '${video.title}'  already exists`),
             ) :
             throwError(new UnprocessableEntityException(e.message)),
         ),
@@ -115,7 +115,7 @@ export class VideoService {
         catchError(e =>
           e.code === 11000 ?
             throwError(
-              new ConflictException(`Video with title '${video.title}' and url '${video.url}' already exists`),
+              new ConflictException(`Video with title '${video.title}' already exists`),
             ) :
             throwError(new UnprocessableEntityException(e.message)),
         ),

@@ -13,14 +13,14 @@ export class Category extends Document {
 
   @Prop({
     type: String,
-    required: false,
+    required: true,
     trim: true,
   })
   thumbnail: string;
 
   @Prop({
     type: String,
-    required: false,
+    required: true,
     trim: true,
   })
   url: string;

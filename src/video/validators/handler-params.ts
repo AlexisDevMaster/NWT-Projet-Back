@@ -1,11 +1,8 @@
-import { IsMongoId, IsNotEmpty } from 'class-validator';
+import { IsMongoId, IsNotEmpty, IsOptional } from 'class-validator';
 
 export class HandlerParams {
   @IsMongoId()
   @IsNotEmpty()
   id: string;
 
-  @IsMongoId()
-  @IsNotEmpty()
-  url: string;
 }

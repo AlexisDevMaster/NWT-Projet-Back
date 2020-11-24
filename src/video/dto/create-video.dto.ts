@@ -1,34 +1,34 @@
 import {
-  IsDate, IsInstance, IsInt,
-  IsNotEmpty, IsNumber,
+  IsDate, IsDateString, IsInstance,
+  IsNotEmpty, IsNumber, IsOptional,
   IsString, ValidateNested,
 } from 'class-validator';
 import { ApiProperty } from '@nestjs/swagger';
-import { PersonAddressDto } from '../../people/dto/person-address.dto';
 import { Type } from 'class-transformer';
+import { CategoryDto } from '../../category/dto/category.dto';
 
 export class CreateVideoDto {
-  @ApiProperty({ name: 'title', description: 'Name of the category', example: 'Gaming' })
+  @ApiProperty({ name: 'title', description: 'Name of the video', example: 'Gaming' })
   @IsString()
   @IsNotEmpty()
   title: string;
 
-  @ApiProperty({ name: 'time', description: 'Thumbnail URL', example: 'https://randomuser.me/portraits/men/55.jpg' })
-  @IsDate()
+  @ApiProperty({ name: 'time', description: 'Time of the video', example: '2020-01-02T00:26:08.000Z' })
+  @IsDateString()
   @IsNotEmpty()
   time: Date;
 
-  @ApiProperty({ name: 'upload_date', description: 'Upload date of the video', example: '2020-01-01' })
-  @IsDate()
+  @ApiProperty({ name: 'upload_date', description: 'Upload date of the video', example: '2020-01-02T00:26:08.000Z' })
+  @IsDateString()
   @IsNotEmpty()
   upload_date: Date;
 
-  @ApiProperty({ name: 'nb_like', description: 'Number of like', example: '800' })
+  @ApiProperty({ name: 'nb_like', description: 'Number of like', example: 800 })
   @IsNumber()
   @IsNotEmpty()
   nb_like: number;
 
-  @ApiProperty({ name: 'nb_dislike', description: 'Number of dislike', example: '800' })
+  @ApiProperty({ name: 'nb_dislike', description: 'Number of dislike', example: 800 })
   @IsNumber()
   @IsNotEmpty()
   nb_dislike: number;
@@ -59,7 +59,7 @@ export class CreateVideoDto {
   @IsNotEmpty()
   thumbnail_path: string;
 
-  @ApiProperty({ name: 'nb_view', description: 'Number of view', example: '1562' })
+  @ApiProperty({ name: 'nb_view', description: 'Number of view', example: 1562 })
   @IsNumber()
   @IsNotEmpty()
   nb_view: number;
@@ -70,9 +70,14 @@ export class CreateVideoDto {
   url: string;
 
   @ApiProperty({ name: 'categories', description: 'Categories' })
-  @IsInstance(PersonAddressDto)
-  @ValidateNested()
-  @Type(() => PersonAddressDto)
-  categories: PersonAddressDto[];
+  @IsInstance(CategoryDto, {
+    each: true
+  })
+  @ValidateNested({
+    each: true
+  })
+  @Type(() => CategoryDto)
+  @IsOptional()
+  categories: CategoryDto[];
 
 }
