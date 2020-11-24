@@ -3,24 +3,33 @@
  * You can use it with mongo-shell or a tool like Robo3T
  */
 
-// Insert category array
-db.getCollection('user').insertMany([
+// Insert users array
+db.getCollection('users').insertMany([
   {
-    userId: 1,
     username: 'john',
     password: 'changeme',
+    verified: 'true',
+    subscriptions : [],
+    likes : [],
+
   },
   {
-    userId: 2,
     username: 'chris',
     password: 'secret',
+    verified: 'true',
+    subscriptions : [],
+    likes : [],
+
   },
   {
-    userId: 3,
     username: 'maria',
     password: 'guess',
+    verified: 'true',
+    subscriptions : [],
+    likes : [],
+
   },
 ]);
 
 // display the final initial data
-db.getCollection('user').find({});
+db.getCollection('users').find({});
