@@ -11,11 +11,22 @@
 ```bash
 $ yarn install
 ```
-You need to add all the scripts in the `scripts` section on Robo3T 
- Then launch the mongoDB database with 
+## Launch the datatbase
+
+Launch the mongoDB database with 
  ```bash
  $ mongod
  ```
+With Robo3T or Studio 3T
+Create 4 collection:
+
+`category`
+`people`
+`users`
+`videos`
+
+Then add all the scripts in the `scripts` section of this application to Robo3T 
+ `
 ## Running the app
 
 ```bash
