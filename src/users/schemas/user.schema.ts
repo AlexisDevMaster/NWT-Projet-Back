@@ -1,9 +1,5 @@
 import { Document } from 'mongoose';
 import { Prop, raw, Schema, SchemaFactory } from '@nestjs/mongoose';
-import { ApiProperty } from '@nestjs/swagger';
-import { Expose, Type } from 'class-transformer';
-import { UserSubscriptionsEntity } from '../entities/user-subscriptions.entity';
-import { UserLikesEntity } from '../entities/user-likes.entity';
 
 @Schema({ toJSON: { virtuals: true }, versionKey: false })
 export class User extends Document {
@@ -14,6 +10,13 @@ export class User extends Document {
     trim: true,
   })
   username: string;
+
+  @Prop({
+    type: String,
+    required: true,
+    trim: true,
+  })
+  password: string;
 
   @Prop({
     type: Boolean,

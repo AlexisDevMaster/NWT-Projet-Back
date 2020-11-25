@@ -18,8 +18,8 @@ export class CreateUserDto {
 
   @ApiProperty({ name: 'verified', description: 'Is User is Verified', example: true })
   @IsString()
-  @IsNotEmpty()
-  verified: boolean;
+  @IsOptional()
+  verified?: boolean;
 
   @ApiProperty({ name: 'likes', description: 'Video like, disliked, or not' })
   @IsInstance(UserLikesDto, {
@@ -30,7 +30,7 @@ export class CreateUserDto {
   })
   @Type(() => UserLikesDto)
   @IsOptional()
-  likes: UserLikesDto[];
+  likes?: UserLikesDto[];
 
   @ApiProperty({ name: 'subscriptions', description: 'User subscriptions', 'type': [UserSubscriptionDto] })
   @IsInstance(UserSubscriptionDto, {
@@ -41,5 +41,5 @@ export class CreateUserDto {
   })
   @Type(() => UserSubscriptionDto)
   @IsOptional()
-  subscriptions: UserSubscriptionDto[];
+  subscriptions?: UserSubscriptionDto[];
 }

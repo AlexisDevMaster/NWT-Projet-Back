@@ -28,7 +28,6 @@ import {
   ApiTags,
   ApiUnprocessableEntityResponse,
 } from '@nestjs/swagger';
-import { HandlerParamsUrl } from '../video/validators/handler-params-url';
 import { HandlerParamsUsername } from './validators/handler-params-username';
 
 @ApiTags('users')

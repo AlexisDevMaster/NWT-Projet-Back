@@ -51,7 +51,7 @@ export class VideoDao {
    * @return {Observable<Video | void>}
    */
   findByUrl(url: string): Observable<Video | void> {
-    return from(this._videoModel.findOne({url})).pipe(
+    return from(this._videoModel.findOneAndUpdate({url}, {$inc: {'nb_view': 1}})).pipe(
       map((doc: MongooseDocument) => !!doc ? doc.toJSON() : undefined),
     );
   }
@@ -84,6 +84,7 @@ export class VideoDao {
         map((doc: MongooseDocument) => !!doc ? doc.toJSON() : undefined),
       );
   }
+
 
   /**
    * Delete a video in video list

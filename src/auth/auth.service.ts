@@ -1,27 +1,60 @@
-import { Injectable } from '@nestjs/common';
+import { Injectable, UnauthorizedException } from '@nestjs/common';
 import { JwtService } from '@nestjs/jwt';
+import { JwtPayload } from './interfaces/jwt-payload.interface';
 import { UsersPassService } from '../users-pass/users-pass.service';
+import * as bcrypt from 'bcrypt';
 
 @Injectable()
 export class AuthService {
-  constructor(
-    private readonly _usersPassService: UsersPassService,
-    private readonly _jwtService: JwtService,
-  ) {}
 
-  async validateUser(username: string, pass: string): Promise<any> {
-    const user = await this._usersPassService.findOne(username);
-    if (user && user.password === pass) {
-      const { password, ...result } = user;
-      return result;
-    }
-    return null;
+  constructor(private usersService: UsersPassService, private jwtService: JwtService){
+
   }
 
-  async login(user: any) {
-    const payload = { username: user.username, sub: user.userId };
-    return {
-      access_token: this._jwtService.sign(payload),
+  async validateUserByPassword(loginAttempt: Request) {
+
+
+
+
+    // This will be used for the initial login
+    const userToAttempt = await this.usersService.findOneByUsername(loginAttempt.body["username"]);
+
+    console.log(loginAttempt.body["password"]);
+    console.log(userToAttempt.password);
+
+    return new Promise((resolve) => {
+      // Check the supplied password against the hash stored for this email address
+
+      if(bcrypt.compare(userToAttempt.password, loginAttempt.body["password"] )){
+        resolve(this.createJwtPayload(userToAttempt));
+      }else{
+        console.log("NOT WORKING");
+         throw new UnauthorizedException();
+      }
+    });
+  }
+
+  async validateUserByJwt(payload: JwtPayload) {
+    // This will be used when the user has already logged in and has a JWT
+    const user = await this.usersService.findOneByUsername(payload.username);
+    if(user){
+      return this.createJwtPayload(user);
+    } else {
+      throw new UnauthorizedException();
+    }
+
+  }
+  
+  createJwtPayload(user){
+    const data: JwtPayload = {
+      username: user.username
     };
+    console.log(this.jwtService.sign(data));
+    const jwt = this.jwtService.sign(data);
+    return {
+      expiresIn: 3600,
+      token: jwt
+    }
   }
 }
+
