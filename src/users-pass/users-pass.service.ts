@@ -11,20 +11,20 @@ export class UsersPassService {
   constructor(@InjectModel(User.name) private userModel: Model<User>) {}
 
   async create(createUserDto) {
+    let user = new UserEntity({username: createUserDto.body["username"], password:"", salt:"", verified:false});
 
-    let user = new UserEntity({username: createUserDto.body["username"], password:createUserDto.body["username"], verified:false});
-
-    user.password = bcrypt.hashSync(user.password, 10);
+    const salt = await bcrypt.genSalt(10);
+    const hash = await bcrypt.hash(createUserDto.body["password"], salt);
+    user.password =  hash;
+    user.salt = salt;
 
     const createdUser = new this.userModel(user);
-    // // NOTE: Arrow functions are not used here as we do not want to use lexical scope for 'this'
-
     return await createdUser.save();
 
   }
 
-  async findOneByUsername(username) {
-    return await this.userModel.findOne({username: username});
+  findOneByUsername(username) {
+    return this.userModel.findOne({username: username});
   }
   // async findOne(username: string): Promise<User | undefined> {
   //   return this.users.find(user => user.username === username);

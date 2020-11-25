@@ -19,6 +19,13 @@ export class User extends Document {
   password: string;
 
   @Prop({
+    type: String,
+    required: true,
+    trim: true,
+  })
+  salt: string;
+
+  @Prop({
     type: Boolean,
     required: true,
     trim: true,

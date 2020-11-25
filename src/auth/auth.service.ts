@@ -13,25 +13,18 @@ export class AuthService {
 
   async validateUserByPassword(loginAttempt: Request) {
 
-
-
-
     // This will be used for the initial login
     const userToAttempt = await this.usersService.findOneByUsername(loginAttempt.body["username"]);
 
-    console.log(loginAttempt.body["password"]);
-    console.log(userToAttempt.password);
+    const result = await bcrypt.compare(loginAttempt.body["password"], userToAttempt.password);
 
-    return new Promise((resolve) => {
-      // Check the supplied password against the hash stored for this email address
+    if(result){
+      return this.createJwtPayload(userToAttempt);
+    }else{
+      throw new UnauthorizedException();
+    }
 
-      if(bcrypt.compare(userToAttempt.password, loginAttempt.body["password"] )){
-        resolve(this.createJwtPayload(userToAttempt));
-      }else{
-        console.log("NOT WORKING");
-         throw new UnauthorizedException();
-      }
-    });
+
   }
 
   async validateUserByJwt(payload: JwtPayload) {
@@ -44,7 +37,7 @@ export class AuthService {
     }
 
   }
-  
+
   createJwtPayload(user){
     const data: JwtPayload = {
       username: user.username

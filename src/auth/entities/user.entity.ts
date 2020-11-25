@@ -17,6 +17,12 @@ export class UserEntity {
   @Type(() => String)
   password: string;
 
+  @ApiProperty({ name: 'salt', description: 'Salt', example: '****' })
+  @Expose()
+  @Type(() => String)
+  salt: string;
+
+
   @ApiProperty({ name: 'verified', description: 'Is User is verified', example: '****' })
   @Expose()
   @Type(() => Boolean)
