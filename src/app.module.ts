@@ -5,10 +5,10 @@ import { MongooseModule, MongooseModuleOptions } from '@nestjs/mongoose';
 import { CategoryModule } from './category/category.module';
 import * as Config from 'config';
 import { VideoModule } from './video/video.module';
-import { AuthModule } from './auth/auth.module';
 import { UsersModule } from './users/users.module';
 import { AppController } from './app.controller';
 import { UsersPassModule } from './users-pass/users-pass.module';
+import { AuthModule } from './auth/auth.module';
 
 @Module({
   imports: [
@@ -17,9 +17,9 @@ import { UsersPassModule } from './users-pass/users-pass.module';
     CategoryModule,
     VideoModule,
     MongooseModule.forRoot(Config.get<string>('mongodb.uri'), Config.get<MongooseModuleOptions>('mongodb.options')),
-    AuthModule,
     UsersModule,
-    UsersPassModule
+    UsersPassModule,
+    AuthModule
   ],
   controllers: [ AppController ],
 

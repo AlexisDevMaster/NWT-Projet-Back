@@ -17,16 +17,16 @@ export class UsersService {
    *
    *
    * @returns {Observable<UserEntity>}
-   * @param username
+   * @param id
    */
-  findOne(username: string): Observable<UserEntity> {
-    return this._usersDao.findById(username)
+  findOne(id: string): Observable<UserEntity> {
+    return this._usersDao.findById(id)
       .pipe(
         catchError(e => throwError(new UnprocessableEntityException(e.message))),
         mergeMap(_ =>
           !!_ ?
             of(new UserEntity(_)) :
-            throwError(new NotFoundException(`Users with username '${username}' not found`)),
+            throwError(new NotFoundException(`Users with username '${id}' not found`)),
         ),
       );
   }
@@ -176,5 +176,5 @@ export class UsersService {
     const dates = date.split('/');
     return (new Date(dates[ 2 ] + '/' + dates[ 1 ] + '/' + dates[ 0 ]).getTime());
   }
-  
+
 }
