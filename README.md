@@ -21,7 +21,6 @@ With Robo3T or Studio 3T
 Create 4 collection:
 
 `category`
-`people`
 `users`
 `videos`
 
