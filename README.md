@@ -11,7 +11,11 @@
 ```bash
 $ yarn install
 ```
-
+You need to add all the scripts in the `scripts` section on Robo3T 
+ Then launch the mongoDB database with 
+ ```bash
+ $ mongod
+ ```
 ## Running the app
 
 ```bash
