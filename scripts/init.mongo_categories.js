@@ -4,7 +4,7 @@
  */
 
 // Insert category array
-db.getCollection('category').insertMany([
+db.getCollection('categories').insertMany([
     {
         "title" : "Gaming",
         "thumbnail" : "",
@@ -43,4 +43,4 @@ db.getCollection('category').insertMany([
 ]);
 
 // display the final initial data
-db.getCollection('category').find({});
+db.getCollection('categories').find({});
