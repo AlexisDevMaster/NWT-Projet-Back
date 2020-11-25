@@ -6,40 +6,40 @@
 // Insert category array
 db.getCollection('category').insertMany([
     {
-        "title": "Gaming",
+        "title" : "Gaming",
         "thumbnail" : "",
-        "url": "gaming"
+        "url" : "gaming"
     },
     {
-        "title": "Vlog",
+        "title" : "Vlog",
         "thumbnail" : "",
-        "url": "vlog"
+        "url" : "vlog"
     },
     {
-        "title": "Music",
+        "title" : "Music",
         "thumbnail" : "",
-        "url": "music"
+        "url" : "music"
     },
     {
-        "title": "Animals",
+        "title" : "Animals",
         "thumbnail" : "",
-        "url": "animals"
+        "url" : "animals"
     },
     {
-        "title": "Sport",
+        "title" : "Sport",
         "thumbnail" : "",
-        "url": "sport"
+        "url" : "sport"
     },
     {
-        "title": "Entertainment",
+        "title" : "Entertainment",
         "thumbnail" : "",
-        "url": "entertainment"
+        "url" : "entertainment"
     },
     {
-        "title": "Science & Technology",
+        "title" : "Science & Technology",
         "thumbnail" : "",
-        "url": "science-technology"
-    },
+        "url" : "science-technology"
+    }
 ]);
 
 // display the final initial data

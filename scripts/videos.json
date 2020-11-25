@@ -1,0 +1,288 @@
+{ 
+    "title" : "Video1",
+    "time" : ISODate("2020-01-02T00:26:08.000+0000"), 
+    "upload_date" : ISODate("2020-11-22T17:00:00.000+0000"), 
+    "nb_like" : NumberInt(1200), 
+    "nb_dislike" : NumberInt(1000), 
+    "author" : "John", 
+    "description" : "", 
+    "path" : "Video1/video0-62.mp4", 
+    "type" : "video/mp4", 
+    "thumbnail_path" : "Video1/Video1.png", 
+    "nb_view" : 57.0, 
+    "url" : "video0-62", 
+    "categories" : [
+        {
+            "id" : undefined, 
+            "title" : ""
+        }
+    ]
+},
+{ 
+    "title" : "Curb your Bitconnect",
+    "time" : ISODate("2020-01-01T00:02:01.000+0000"), 
+    "upload_date" : ISODate("2020-01-01T00:06:25.000+0000"), 
+    "nb_like" : NumberInt(65000), 
+    "nb_dislike" : NumberInt(12000), 
+    "author" : "Admin", 
+    "description" : "No Description", 
+    "path" : "Video2/curb-your-bitconnect.mp4", 
+    "thumbnail_path" : "Video2/Video2.png", 
+    "nb_view" : 8.0, 
+    "url" : "video2", 
+    "categories" : [
+        {
+            "id" : ObjectId("5fb9b16949ba5b4ca3e4b340"), 
+            "title" : "Music"
+        }
+    ]
+},
+{ 
+    "title" : "Space Cats — Magic Fly",
+    "time" : ISODate("2020-01-01T00:01:08.000+0000"), 
+    "upload_date" : ISODate("1974-01-01T23:00:00.000+0000"), 
+    "nb_like" : NumberInt(586000), 
+    "nb_dislike" : NumberInt(27000), 
+    "author" : "Admin", 
+    "description" : "No Description", 
+    "path" : "Video3/space-cats-magic-fly.mp4", 
+    "thumbnail_path" : "Video3/Video3.png", 
+    "nb_view" : 1.0, 
+    "url" : "video3", 
+    "categories" : [
+        {
+            "title" : "Music"
+        }
+    ]
+},
+{ 
+    "_id" : ObjectId("5fba74c949ba5b4ca3e4b428"), 
+    "title" : "Numb (Official Video) - Linkin Park", 
+    "time" : ISODate("2020-01-01T00:03:06.000+0000"), 
+    "upload_date" : ISODate("2020-11-22T21:15:00.000+0000"), 
+    "nb_like" : NumberLong(920000000), 
+    "nb_dislike" : NumberInt(213000), 
+    "author" : "Admin", 
+    "description" : "No Description", 
+    "path" : "Video4/numb-official-video-linkin-park.mp4", 
+    "thumbnail_path" : "Video4/Video4.png", 
+    "nb_view" : NumberInt(1494180920), 
+    "url" : "linkinpark-numb", 
+    "categories" : [
+        {
+            "id" : ObjectId("5fb9b16949ba5b4ca3e4b33e"), 
+            "title" : "Gaming"
+        }
+    ]
+},
+{ 
+    "_id" : ObjectId("5fba74c949ba5b4ca3e4b429"), 
+    "title" : "Un Gitan vénére", 
+    "time" : ISODate("2020-01-01T00:01:04.000+0000"), 
+    "upload_date" : ISODate("1974-01-01T23:00:00.000+0000"), 
+    "nb_like" : NumberInt(34000), 
+    "nb_dislike" : NumberInt(2900), 
+    "author" : "Admin", 
+    "description" : "Un gitan vraiment très vénére", 
+    "path" : "Video5/un-gitan-venere.mp4", 
+    "thumbnail_path" : "Video5/Video5.png", 
+    "nb_view" : NumberInt(4968989), 
+    "url" : "video5", 
+    "categories" : [
+        {
+            "id" : ObjectId("5fb9b16949ba5b4ca3e4b33e"), 
+            "title" : "Gaming"
+        }
+    ]
+},
+{ 
+    "_id" : ObjectId("5fba74c949ba5b4ca3e4b42a"), 
+    "title" : "Djo Lopez - Clash Gitans - Clermont Ferrand 63", 
+    "time" : ISODate("2020-01-01T01:02:56.000+0000"), 
+    "upload_date" : ISODate("2020-01-01T00:01:30.000+0000"), 
+    "nb_like" : NumberInt(13000), 
+    "nb_dislike" : NumberInt(2400), 
+    "author" : "Admin", 
+    "description" : "No Description", 
+    "path" : "Video6/djo-lopez-clash-gitans-clermont-ferrand-63.mp4", 
+    "thumbnail_path" : "Video6/Video6.png", 
+    "nb_view" : NumberInt(4383594), 
+    "url" : "video6", 
+    "categories" : [
+        {
+            "id" : undefined, 
+            "title" : ""
+        }
+    ]
+},
+{ 
+    "_id" : ObjectId("5fba74c949ba5b4ca3e4b42b"), 
+    "title" : "Video7", 
+    "time" : ISODate("2020-01-01T03:30:00.000+0000"), 
+    "upload_date" : ISODate("1974-01-01T23:00:00.000+0000"), 
+    "nb_like" : 0.0, 
+    "nb_dislike" : 0.0, 
+    "author" : "Admin", 
+    "description" : "No Description", 
+    "path" : "Video7/Video7.mp4", 
+    "thumbnail_path" : "Video7/Video7.png", 
+    "nb_view" : 2.0, 
+    "url" : "video7", 
+    "categories" : [
+        {
+            "id" : undefined, 
+            "title" : ""
+        }
+    ]
+},
+{ 
+    "_id" : ObjectId("5fba74c949ba5b4ca3e4b42c"), 
+    "title" : "Video8", 
+    "time" : ISODate("2020-01-01T00:15:00.000+0000"), 
+    "upload_date" : ISODate("1974-01-01T23:00:00.000+0000"), 
+    "nb_like" : 0.0, 
+    "nb_dislike" : 0.0, 
+    "author" : "Admin", 
+    "description" : "This is a little description", 
+    "path" : "Video8/Video8.mp4", 
+    "thumbnail_path" : "Video8/Video8.png", 
+    "nb_view" : 0.0, 
+    "url" : "video8", 
+    "categories" : [
+        {
+            "id" : ObjectId("5fb9b16949ba5b4ca3e4b33e"), 
+            "title" : "Gaming"
+        }
+    ]
+},
+{ 
+    "_id" : ObjectId("5fbc700a78d9bf68ac2eed9c"), 
+    "title" : "Mario Scream Meme Compilation #1", 
+    "time" : ISODate("2020-01-02T00:26:08.000+0000"), 
+    "upload_date" : ISODate("2020-01-02T00:26:08.000+0000"), 
+    "nb_like" : NumberInt(800), 
+    "nb_dislike" : NumberInt(805), 
+    "author" : "Admin", 
+    "description" : "Memes compilation", 
+    "path" : "mario-scream/mario-scream.mp4", 
+    "type" : "video/mp4", 
+    "thumbnail_path" : "mario-scream/mario-scream.png", 
+    "nb_view" : NumberInt(1567), 
+    "url" : "mario-scream"
+},
+{ 
+    "_id" : ObjectId("5fbc765bb5828328dc2144b1"), 
+    "title" : "Mario Memes", 
+    "time" : ISODate("2020-01-02T00:26:08.000+0000"), 
+    "upload_date" : ISODate("2020-01-02T00:26:08.000+0000"), 
+    "nb_like" : NumberInt(800), 
+    "nb_dislike" : NumberInt(800), 
+    "author" : "Admin", 
+    "description" : "Compilation of Mario memes", 
+    "path" : "mario-scream/mario-scream.mp4", 
+    "type" : "video/mp4", 
+    "thumbnail_path" : "mario-scream/mario-scream.png", 
+    "nb_view" : NumberInt(1565), 
+    "url" : "mario-mems"
+},
+{ 
+    "_id" : ObjectId("5fbd235e649929688869b407"), 
+    "title" : "Video78", 
+    "time" : ISODate("2020-01-01T00:26:08.000+0000"), 
+    "upload_date" : ISODate("1974-01-01T23:00:00.000+0000"), 
+    "nb_like" : NumberInt(0), 
+    "type" : "video/mp4", 
+    "nb_dislike" : NumberInt(0), 
+    "author" : "Admin", 
+    "description" : "", 
+    "path" : "Video1/video0-62.mp4", 
+    "thumbnail_path" : "Video1/video0-62.png", 
+    "nb_view" : NumberInt(0), 
+    "url" : "video0-62"
+},
+{ 
+    "_id" : ObjectId("5fbd23c390fe113630102489"), 
+    "title" : "Video77", 
+    "time" : ISODate("2020-01-01T00:26:08.000+0000"), 
+    "upload_date" : ISODate("1974-01-01T23:00:00.000+0000"), 
+    "nb_like" : NumberInt(0), 
+    "type" : "video/mp4", 
+    "nb_dislike" : NumberInt(0), 
+    "author" : "Admin", 
+    "description" : "", 
+    "path" : "Video1/video0-62.mp4", 
+    "thumbnail_path" : "Video1/video0-62.png", 
+    "nb_view" : NumberInt(0), 
+    "url" : "video0-62"
+},
+{ 
+    "_id" : ObjectId("5fbd23f8c4773287d425814e"), 
+    "title" : "Video75", 
+    "time" : ISODate("2020-01-01T00:26:08.000+0000"), 
+    "upload_date" : ISODate("1974-01-01T23:00:00.000+0000"), 
+    "nb_like" : NumberInt(0), 
+    "type" : "video/mp4", 
+    "nb_dislike" : NumberInt(0), 
+    "author" : "Admin", 
+    "description" : "", 
+    "path" : "Video1/video0-62.mp4", 
+    "thumbnail_path" : "Video1/video0-62.png", 
+    "nb_view" : NumberInt(0), 
+    "url" : "video0-62"
+},
+{ 
+    "_id" : ObjectId("5fbd250c1eb5c77b100eec8e"), 
+    "title" : "Video76", 
+    "time" : ISODate("2020-01-01T00:26:08.000+0000"), 
+    "upload_date" : ISODate("1974-01-01T23:00:00.000+0000"), 
+    "nb_like" : NumberInt(0), 
+    "type" : "video/mp4", 
+    "nb_dislike" : NumberInt(0), 
+    "author" : "Admin", 
+    "description" : "", 
+    "path" : "Video1/video0-62.mp4", 
+    "thumbnail_path" : "Video1/video0-62.png", 
+    "nb_view" : NumberInt(0), 
+    "url" : "video0-62"
+},
+{ 
+    "_id" : ObjectId("5fbd30c1b8f2c17f10e1cf43"), 
+    "title" : "Video92", 
+    "time" : ISODate("2020-01-01T23:00:00.000+0000"), 
+    "upload_date" : ISODate("2020-01-01T00:06:25.000+0000"), 
+    "nb_like" : NumberInt(0), 
+    "nb_dislike" : NumberInt(0), 
+    "author" : "Admin", 
+    "type" : "video/mp4", 
+    "description" : "No Description", 
+    "path" : "Video2/Video2.mp4", 
+    "thumbnail_path" : "Video2/Video2.png", 
+    "nb_view" : NumberInt(0), 
+    "url" : "video2", 
+    "categories" : [
+        {
+            "_id" : ObjectId("5fbd30c1b8f2c17f10e1cf44")
+        }
+    ]
+},
+{ 
+    "_id" : ObjectId("5fbd31154af96f8364ee2f7e"), 
+    "title" : "Video93", 
+    "time" : ISODate("2020-01-01T23:00:00.000+0000"), 
+    "upload_date" : ISODate("2020-01-01T00:06:25.000+0000"), 
+    "nb_like" : NumberInt(0), 
+    "nb_dislike" : NumberInt(0), 
+    "author" : "Admin", 
+    "type" : "video/mp4", 
+    "description" : "No Description", 
+    "path" : "Video2/Video2.mp4", 
+    "thumbnail_path" : "Video2/Video2.png", 
+    "nb_view" : NumberInt(0), 
+    "url" : "video2", 
+    "categories" : [
+        {
+            "_id" : ObjectId("5fbd31154af96f8364ee2f7f"), 
+            "url" : "music"
+        }
+    ]
+}

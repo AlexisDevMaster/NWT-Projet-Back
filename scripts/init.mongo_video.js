@@ -5,160 +5,78 @@
 
 // Insert people array
 db.getCollection('videos').insertMany([
-    {
-        "title": "Video1",
-        "time": ISODate("2020-01-01T00:26:08.000Z"),
-        "upload_date":  ISODate("1974-01-01T23:00:00.000Z"),
-        "nb_like": 0,
-        "nb_dislike": 0,
-        "author": "Admin",
-        "type": "video/mp4",
-        "description": "",
-        "path":  "video0-62/video0-62.mp4",
-        "thumbnail_path": "video0-62/video0-62.png",
-        "nb_view": 0,
-        "url": "video0-62",
-        "categories":[{"id": "", "title": ""}]
-    },
-    {
-        "title": "Video2",
-        "time":  ISODate("2020-01-01T23:00:00.000Z"),
-        "upload_date": ISODate("2020-01-01T00:06:25.000Z"),
-        "nb_like": 0,
-        "nb_dislike": 0,
-        "author": "Admin",
-        "description": "",
-        "type": "video/mp4",
-        "path":  "video2/video2.mp4",
-        "thumbnail_path": "video2/video2.png",
-        "nb_view": 0,
-        "url": "video2",
-        "categories":[{"id": "", "title": "Music"}]
-    },
-    {
-        "title": "Video3",
-        "time": ISODate("2020-01-01T00:09:00.000Z"),
-        "upload_date":  ISODate("1974-01-01T23:00:00.000Z"),
-        "nb_like": 0,
-        "nb_dislike": 0,
-        "author": "Admin",
-        "type": "video/mp4",
-        "description": "",
-        "path":  "video3/video3.mp4",
-        "thumbnail_path":  "video3/video3.png",
-        "nb_view": 0,
-        "url": "video3",
-        "categories":[{"id": "", "title": "Vlog"}]
-    },
-    {
-        "title": "Video4",
-        "time": ISODate("2020-01-01T00:05:00.000Z"),
-        "upload_date": ISODate("1974-01-01T23:00:00.000Z"),
-        "nb_like": 0,
-        "nb_dislike": 0,
-        "author": "Admin",
-        "description": "",
-        "type": "video/mp4",
-        "path":  "video4/video4.mp4",
-        "thumbnail_path": "video4/video4.png",
-        "nb_view": 0,
-        "url": "video4",
-        "categories":[{"id": "", "title": "Gaming"}]
-    },    {
-        "title": "Video5",
-        "time": ISODate("2020-01-01T00:01:30.000Z"),
-        "upload_date":  ISODate("1974-01-01T23:00:00.000Z"),
-        "nb_like": 0,
-        "nb_dislike": 0,
-        "author": "Admin",
-        "description": "",
-        "type": "video/mp4",
-        "path":  "video5/video5.mp4",
-        "thumbnail_path": "video5/video5.png",
-        "nb_view": 0,
-        "url": "video5",
-        "categories":[{"id": "", "title": "Gaming"}]
-    },    {
-        "title": "Video6",
-        "time": ISODate("2020-01-01T00:01:30.000Z"),
-        "upload_date":  ISODate("2020-01-01T00:01:30.000Z"),
-        "nb_like": 0,
-        "nb_dislike": 0,
-        "author": "Admin",
-        "type": "video/mp4",
-        "description": "",
-        "path":  "video6/video6.mp4",
-        "thumbnail_path": "video6/video6.png",
-        "nb_view": 0,
-        "url": "video6",
-        "categories":[{"id": "", "title": ""}]
-    },    {
-        "title": "Video7",
-        "time": ISODate("2020-01-01T03:30:00.000Z"),
-        "upload_date":  ISODate("1974-01-01T23:00:00.000Z"),
-        "nb_like": 0,
-        "nb_dislike": 0,
-        "author": "Admin",
-        "type": "video/mp4",
-        "description": "",
-        "path":  "video7/video7.mp4",
-        "thumbnail_path": "video7/video7.png",
-        "nb_view": 0,
-        "url": "video7",
-        "categories":[{ "url":"memes"}]
-    },    {
-        "title": "Video8",
-        "time": ISODate("2020-01-01T00:15:00.000Z"),
-        "upload_date":  ISODate("1974-01-01T23:00:00.000Z"),
-        "nb_like": 0,
-        "nb_dislike": 0,
-        "author": "Admin",
-        "type": "video/mp4",
-        "description": "",
-        "path":  "video8/video8.mp4",
-        "thumbnail_path": "video8/video8.png",
-        "nb_view": 0,
-        "url": "video8",
-        "categories":[{"title": "Gaming"}]
-    },
+      {
+          'title': 'Video1',
+          'time': '2020-01-02T00:26:08Z',
+          'upload_date': '2020-11-22T17:00:00Z',
+          'nb_like': 1200,
+          'nb_dislike': 1000,
+          'author': 'John',
+          'description': '',
+          'path': 'Video1/video0-62.mp4',
+          'type': 'video/mp4',
+          'thumbnail_path': 'Video1/Video1.png',
+          'nb_view': 57,
+          'url': 'video0-62',
+          'categories': []
+      },
+      {
+          'title': 'Curb your Bitconnect',
+          'time': '2020-01-01T00:02:01Z',
+          'upload_date':'2020-01-01T00:06:25Z',
+          'nb_like': 65000,
+          'nb_dislike': 12000,
+          'author': 'Admin',
+          'description': 'No Description',
+          'path': 'Video2/curb-your-bitconnect.mp4',
+          'thumbnail_path': 'Video2/Video2.png',
+          'nb_view': 8,
+          'url': 'video2',
+          'categories': []
+      }, {
+          'title': 'Space Cats — Magic Fly',
+          'time': '2020-01-01T00:01:08Z',
+          'upload_date': '1974-01-01T23:00:00Z',
+          'nb_like': 586000,
+          'nb_dislike': 27000,
+          'author': 'Admin',
+          'description': 'No Description',
+          'path': 'Video3/space-cats-magic-fly.mp4',
+          'thumbnail_path': 'Video3/Video3.png',
+          'nb_view': 1,
+          'url': 'video3',
+          'categories': []
 
+      }, {
+          'title': 'Numb (Official Video) - Linkin Park',
+          'time': '2020-01-01T00:03:06Z',
+          'upload_date': '2020-11-22T21:15:00Z',
+          'nb_like': 920000000,
+          'nb_dislike': 213000,
+          'author': 'Admin',
+          'description': 'No Description',
+          'path': 'Video4/numb-official-video-linkin-park.mp4',
+          'thumbnail_path': 'Video4/Video4.png',
+          'nb_view': 1494180920,
+          'url': 'linkinpark-numb',
+          'categories': []
+      }, {
+          'title': 'Un Gitan vénére',
+          'time':'2020-01-01T00:01:04Z',
+          'upload_date': '1974-01-01T23:00:00Z',
+          'nb_like': 34000,
+          'nb_dislike': 2900,
+          'author': 'Admin',
+          'description': 'Un gitan vraiment très vénére',
+          'path': 'Video5/un-gitan-venere.mp4',
+          'thumbnail_path': 'Video5/Video5.png',
+          'nb_view': 4968989,
+          'url': 'video5',
+          'categories': []
+      }
+  ]
 
-
-
-
-]);
-
-// Create an array with manager element
-var data = db.getCollection('videos').find({}).map(function (element) {
-    return { _id: element._id, title: element.title, categories: element.categories };
-});
-
-// For each element of the array ...
-data.forEach(function (element) {
-    // ... check if we have a manager
-    // try to get the related manager element inside the array
-    var categoriesIdArray = [];
-    var categoriesNameArray = [];
-
-    if(element.categories.length>0) {
-        element.categories.forEach(function(el) {
-              categoriesIdArray.push(db.getCollection('categories').find({ "title": el.title }).map(function(elt) {
-                  return elt._id;
-              }));
-              categoriesNameArray.push(el.title);
-          }
-        );
-        categoriesIdArray.forEach(function(elem, index){
-        db.getCollection('videos').update(
-              { _id: element._id,"categories": {$elemMatch: {title: categoriesNameArray[index]}}},
-              {$set : {'categories.$.id' : elem[0]}})
-            ;
-        });
-    }
-
-
-
-});
+);
 
 // display the final initial data
 db.getCollection('videos').find({});

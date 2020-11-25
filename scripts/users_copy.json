@@ -1,0 +1,52 @@
+{ 
+    "_id" : ObjectId("5fbe318350d5b16afc70a318"), 
+    "username" : "Alexis", 
+    "password" : "$2b$10$s6wlGcorhwfI3hWFvIg/veiWSjGfcHfUwRzzktAuIurTpIOJ7SaTW", 
+    "salt" : "$2b$10$s6wlGcorhwfI3hWFvIg/ve", 
+    "verified" : false, 
+    "subscriptions" : [
+
+    ], 
+    "likes" : [
+
+    ]
+},
+{ 
+    "_id" : ObjectId("5fbe319d50d5b16afc70a319"), 
+    "username" : "Admin", 
+    "password" : "$2b$10$UpPqLKJiwjRvjKsiRmh5MehtCi4dB3oh81rATUQGKxiXpA2B2ef2e", 
+    "salt" : "$2b$10$UpPqLKJiwjRvjKsiRmh5Me", 
+    "verified" : true, 
+    "subscriptions" : [
+
+    ], 
+    "likes" : [
+
+    ]
+},
+{ 
+    "_id" : ObjectId("5fbe31af50d5b16afc70a31a"), 
+    "username" : "Pierre", 
+    "password" : "$2b$10$vM3keaDBp1h5E2u1bZyf8eqhjW..rOqPH7HzOlbVBSB/RH2FZ.6lC", 
+    "salt" : "$2b$10$vM3keaDBp1h5E2u1bZyf8e", 
+    "verified" : false, 
+    "subscriptions" : [
+
+    ], 
+    "likes" : [
+
+    ]
+},
+{ 
+    "_id" : ObjectId("5fbe36c3a559c494204ae22b"), 
+    "username" : "John", 
+    "password" : "$2b$10$PEMptHcIenjFC/w.w.oyk.zAqU0fDtVoq49Z2rhhVNnOTe4HQjNgS", 
+    "salt" : "$2b$10$PEMptHcIenjFC/w.w.oyk.", 
+    "verified" : false, 
+    "subscriptions" : [
+
+    ], 
+    "likes" : [
+
+    ]
+}
